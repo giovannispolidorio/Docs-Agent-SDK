@@ -1,0 +1,60 @@
+# Olos Active Call
+
+Nessa sessão do SDK são organizados os metodos para controlar o estda da ligação. E para isso expomos alguns métodos para ajudar a sua aplicação a controlar esses estados. Para começar a utilizar esses métodos devemos seguir os seguites passos.
+
+```js copy
+import { OlosActiveCall } from "olosagentsdk";
+
+const activeCall = new OlosActiveCall();
+```
+
+Dessa maneira a variavel _activeCall_ contem todos os métodos abaixo
+
+## addActiveCall
+
+Adiciona um novo ID a lista de ligações ativas
+
+```js copy
+activeCall.addActiveCall(10);
+```
+
+## getCallIdMaster
+
+Retorna o principal ID da ligação
+
+```js copy
+const callIdMaster = activeCall.getCallIdMaster();
+```
+
+## setCallIdMaster
+
+Seta um novo ID de ligação principal
+
+```js copy
+activeCall.setCallIdMaster(10);
+```
+
+## renewActiveCall
+
+Renova a lista de ligações ativas
+
+```js copy
+const calls = [
+  {
+    callId: 1,
+  },
+  {
+    callId: 2,
+  },
+];
+
+activeCall.renewActiveCall(calls);
+```
+
+## resetAll
+
+Reseta a lista de de ID's que controlam a ligação
+
+```js copy
+activeCall.resetAll();
+```
