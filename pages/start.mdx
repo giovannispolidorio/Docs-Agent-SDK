@@ -1,67 +1,28 @@
-# Instalação
+# Início
 
-Após receber as devidas autorizações instalar o SDK usando o _NPM_
+O Agent SDK se comunica com a plataforma Olos através de APIs Rest com autenticação Oauth2, para que seja efetuado testes de integrações
+será necessário um provionamento prévio no Ambiente de Testes da plataforma Olos.
 
-```js copy
-npm i @olostecnologia/olosagentsdk
-```
+## APIs e Credenciais
 
-# Inicialização
+Solicite os endereços das APIs como também as credenciais de autenticação para o nosso time de Professional Service (OPS) clicando
+[aqui](https://support.olos.com.br/a/catalog/request-items?search=ops).
 
-Após a Instalação ser concluida é necessario fazer a inicialização do sdk utilizando a função _createOlos_
+**Após solicitado o time de OPS vai fornecer os endereços das seguintes APIs:**
 
-```js copy
-import { createOlos } from "olosagentsdk";
+- WebAPIAgentControl
+- WebApiConfiguration
+- WebApiMailingControl
+- WebAPISoftphone
+- WebApiRecordingRetrieve
+- wsSoftphone
 
-const addrs = {
-  wsAgentCmd: "<server>:<porta>/WebAPIAgentControl_Token/AgentCommand/",
-  wsAgentEvt: "<server>:<porta>/WebAPIAgentControl_Token/AgentEvent/",
-  WsAgentCloud: "<server>:<porta>/WebAPIAgentControl_Token/CloudAgent/",
-  wsMailingCmd: "<server>:<porta>/WebAPIMailingControl_Token/MailingCommand/",
-  wsAgentConfig: "<server>:<porta>/WebAPIConfiguration_Token/AgentConfig/",
-  wsVoiceSupport: "<server>:<porta>/WsVoiceSupportIntegration/WsVoiceSupportIntegration.asmx",
-  WebAPIAgentControl: `<server>:<porta>/WebAPIAgentControl_Token/`,
-  wsSoftphone: `<server>:<porta>/WebAPISoftphone_Token/Softphone/`,
-  wsMcx: `<server>:<porta>/WsMcx_Token/wsmcx/Mcx/`,
-  wsRecordingRetrieve: `<server>:<porta>/WebApiRecordingRetrieve_Token/RecordTextComm/`,
-};
+**Credenciais de Usuário:**
 
-const auth = {
-  user: "agente",
-  password: "123",
-  clientID: "<clientID>",
-  clientSecret: "<clientSecret>",
-};
+- Usuário de integração
+- Senha do usuário de integração
 
-const jsLogger = false;
+**Credenciais de Aplicação**
 
-createOlos(addrs, auth, jsLogger);
-```
-
-## Parametros para inicializar
-
-Para podermos inicializar o SDK é necessario passar três paramentros para a função _createOlos_
-
-### addrs
-
-Nesse parametro devemos informar para o SDK quais os servidores que as APIs devem ser apontadas
-
-### auth
-
-Nesse parametro devemos informar para o SDK quais as informações para autenticar a API
-
-```json copy
-{
-  "user": "Nome do Agente",
-  "password": "Senha do Agente",
-  "clientID": "clientID fornecido pela Olos",
-  "clientSecret": "clientSecret fornecido pela Olos"
-}
-```
-### jsLogger
-
-Nesse parametro informamos se o SDK de inicializar com a função de logs ligada
-
-# Eventos
-
-Assim que a inicialização for completa o o SDK vai começar a enviar os eventos para o agente. Vamos expecificar melhor todos os tipos de evento na próxima sessão. 
+- clientID
+- clientSecret
