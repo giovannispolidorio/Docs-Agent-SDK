@@ -4,4 +4,24 @@ Text
 
 ## getCampaignByUserLogin
 
+```ts copy
+import { OlosUserConfigWS } from "olosagentsdk";
+
+const userConfigWS = new OlosUserConfigWS();
+userConfigWS.getCampaignByUserLogin(
+    login: string,
+    loginOwner: string,
+    passwordOwner: string,
+    callback: (response: any) => void,
+    callbackError?: (response: any) => void
+);
+```
+
 ## getChatSupervisorAgent
+
+```ts copy
+import { OlosUserConfigWS } from "olosagentsdk";
+
+const userConfigWS = new OlosUserConfigWS();
+userConfigWS.getChatSupervisorAgent(agentId: any, callback?: (response: any) => void);
+```

@@ -4,20 +4,108 @@ Text
 
 ## setActiveCall
 
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.setActiveCall(actCall: any);
+```
+
 ## listMailings
+
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.listMailings(campaignId: any, callback?: (response: any) => void);
+```
 
 ## finalizeClient
 
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.finalizeClient(mailingName: any, dispId: any, customerId: any, callback?: (response: any) => void);
+```
+
 ## finalizeClientByDispositionCode
+
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.finalizeClientByDispositionCode(
+    campaignId: any,
+    mailingName: any,
+    dispCode: any,
+    customerId: any,
+    callback?: (response: any) => void
+);
+```
 
 ## invalidatePhoneNumber
 
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.invalidatePhoneNumber(ddd: string, phoneNumber: any, callback?: (response: any) => void);
+```
+
 ## insertPhoneNumber
+
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.insertPhoneNumber(ddd: any, phoneNumber: any, callback?: (response: any) => void);
+```
 
 ## updateMailingData
 
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.updateMailingData(field: any, data: any, callback?: (response: any) => void);
+```
+
 ## upsertRecordData
+
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.upsertRecordData(
+    { LayoutId, MailingDataJson, MailingName, CampaignId, CustomerId },
+    callbackSuccess: (response: any) => void,
+    callbackError: (response: any) => void
+);
+```
 
 ## customerCallback
 
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.customerCallback(
+    callbackData: CallbackData,
+    callbackSuccess: (response: any) => void,
+    callbackError: (response: any) => void
+);
+```
+
 ## unfinalizeClient
+
+```ts copy
+import { OlosMailingWS } from "olosagentsdk";
+
+const mailingWS = new OlosMailingWS();
+mailingWS.unfinalizeClient(
+    { DispositionId, MailingName, CustomerId },
+    callbackSuccess: (response: any) => void,
+    callbackError: (response: any) => void
+);
+```

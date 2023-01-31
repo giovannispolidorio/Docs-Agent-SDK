@@ -4,18 +4,125 @@ Text
 
 ## getJourney
 
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.getJourney(
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
+
 ## disposition
+
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.disposition(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: (err: any) => void
+);
+```
 
 ## phoneInfoReq
 
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.phoneInfoReq(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
+
 ## search
+
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.search(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
 
 ## delJourneyFromSms
 
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.delJourneyFromSms(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
+
 ## recordInfo
+
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.recordInfo(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
 
 ## recordInfoEncrypt
 
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.recordInfoEncrypt(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
+
 ## setRecordInUse
 
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.setRecordInUse(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```
+
 ## addHistory
+
+```ts copy
+import { OlosMcx } from "olosagentsdk";
+
+const mcx = new OlosMcx();
+mcx.addHistory(
+    information: unknown,
+    timeout: number | null,
+    callbackSuccess: (response: McxResponse) => void,
+    callbackError: () => void
+);
+```

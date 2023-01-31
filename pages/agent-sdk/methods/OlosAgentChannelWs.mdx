@@ -4,70 +4,369 @@ Text
 
 ## start
 
+Paramentro agentId
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.start(12);
+```
+
 ## stop
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.stop();
+```
 
 ## createReqId
 
+Paramentro dialogueId
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.createReqId(12);
+```
+
 ## agentAuthenticationChat
+
+Paramentro login, senha e callback
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentAuthenticationChat("login", "senha", callback);
+```
 
 ## agentAuthenticationAzureChat
 
+Paramentro tokenId, callback
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentAuthenticationAzureChat("tokenId", callback);
+```
+
 ## agentAuthenticationISAMChat
+
+Paramentro tokenId, callback e callbackError
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentAuthenticationISAMChat("tokenId", callback, callbackError);
+```
 
 ## agentAuthenticationChatWithPause
 
+Paramentro login, senha, reasonCode e callback
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentAuthenticationChatWithPause("login", "senha", "reasonCode", callback);
+```
+
 ## agentAuthenticationAzureChatWithPause
+
+Paramentro tokenId, reasonCode e callback
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentAuthenticationAzureChat("tokenId", "reasonCode", callback);
+```
 
 ## agentAuthenticationChatISAMWithPause
 
+Paramentro tokenId, reasonCode, callback e callbackError
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentAuthenticationISAMChat("tokenId", "reasonCode", callback, callbackError);
+```
+
 ## agentReasonChatRequest
+
+Paramentro reasonId
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentReasonChatRequest("reasonId");
+```
 
 ## agentReasonChatRequestByCode
 
+Paramentro reasonCode
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentReasonChatRequestByCode("reasonCode");
+```
+
 ## agentIdleChatRequest
+
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentIdleChatRequest();
+```
 
 ## agentChannelLogout
 
+```js copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentChannelLogout();
+```
+
 ## dispositionChat
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+type params = {
+  dialogId: string;
+  dispositionId: string;
+  dispositionCode: string;
+  year: string;
+  month: string;
+  day: string;
+  hour: string;
+  minute: string;
+  privateAgent: string;
+};
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.dispositionChat(params: params);
+```
 
 ## messageChatRequest
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+type params = {
+    dialogId: string,
+    message: string,
+    attachments: string
+};
+
+const agentChannel = new OlosAgentChannelWs();
+const chat = agentChannel.messageChatRequest(params: params);
+```
+
 ## currentDialogsRequest
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+type params = {
+    campaignId: string,
+};
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.currentDialogsRequest(params: params);
+```
 
 ## messageNotice
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.messageNotice(campaignId: string, dialogId: string, messageid: string, status: string);
+```
+
 ## listOnlineAgentsInCampaign
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.listOnlineAgentsInCampaign(campaignId: string);
+```
 
 ## getAmountCallsInQueue
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.getAmountCallsInQueue(campaignId: string);
+```
+
 ## consultingAssistedCampaignRequest
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.consultingAssistedCampaignRequest(AgentId: string, CampaignId: string, TransferAgentId: string, uuiData: string);
+```
 
 ## typing
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.typing(dialogId: string);
+```
+
 ## listChatDispositions
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.listChatDispositions(campaignId: string);
+```
 
 ## listChatPauseReasons
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.listChatPauseReasons();
+```
+
 ## resetChatInactivityTimer
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.resetChatInactivityTimer(dialogId: string);
+```
 
 ## getMailingHistory
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.getMailingHistory(mailingName: string, recordId: string, maxResults: string, lastDaysLimit: string, dialogId: string);
+```
+
 ## agentDailySummary
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.agentDailySummary(agentId: string);
+```
 
 ## asyncMessageReply
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.asyncMessageReply(agentId: string, conversationId: string, content: string, attachments: string, formatedContent: string);
+```
+
 ## asyncMessageDismiss
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.asyncMessageDismiss(agentId: string, conversationId: string);
+```
 
 ## getAsyncMessage
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.getAsyncMessage(agentId: string, conversationId: string);
+```
+
 ## asyncMessageListRequest
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.asyncMessageListRequest(agentId: string, campaignId: string);
+```
 
 ## asyncMessageListRepliedRequest
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.asyncMessageListRepliedRequest(agentId: string, campaignId: string);
+```
+
 ## asyncMessageResetReadingTimeoutRequest
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.asyncMessageResetReadingTimeoutRequest(agentId: string, conversationId: string);
+```
 
 ## asyncMessageHistoricalRequest
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.asyncMessageHistoricalRequest(agentId: string, conversationId: string);
+```
+
 ## transferChat
 
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.transferChat(
+    dialogId: string,
+    dispositionId: string,
+    dispositionCode: string,
+    campaignIdDest: string,
+    agentIdDest: string,
+    year: string,
+    month: string,
+    day: string,
+    hour: string,
+    minute: string,
+    privateTransfer: boolean
+);
+```
+
 ## getListStatus
+
+```ts copy
+import { OlosAgentChannelWs } from "olosagentsdk";
+
+const agentChannel = new OlosAgentChannelWs();
+agentChannel.getListStatus();
+```

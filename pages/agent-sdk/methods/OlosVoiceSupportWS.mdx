@@ -4,8 +4,36 @@ Text
 
 ## start
 
+```ts copy
+import { OlosVoiceSupportWS } from "olosagentsdk";
+
+const voiceSupportWS = new OlosVoiceSupportWS();
+voiceSupportWS.start(agentLogin: any, audio: any, callback?: (response: any) => void);
+```
+
 ## pause
+
+```ts copy
+import { OlosVoiceSupportWS } from "olosagentsdk";
+
+const voiceSupportWS = new OlosVoiceSupportWS();
+voiceSupportWS.pause(agentLogin: any, callback?: (response: any) => void);
+```
 
 ## resume
 
+```ts copy
+import { OlosVoiceSupportWS } from "olosagentsdk";
+
+const voiceSupportWS = new OlosVoiceSupportWS();
+voiceSupportWS.resume(agentLogin: any, callback?: (response: any) => void);
+```
+
 ## stop
+
+```ts copy
+import { OlosVoiceSupportWS } from "olosagentsdk";
+
+const voiceSupportWS = new OlosVoiceSupportWS();
+voiceSupportWS.stop(agentLogin: any, callback?: (response: any) => void);
+```

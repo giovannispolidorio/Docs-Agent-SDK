@@ -4,132 +4,652 @@ Text
 
 ## stop
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.stop();
+```
+
 ## agentAuthentication
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentAuthentication(login: string, passwd: string, callback?: (agentId: string) => void);
+```
 
 ## agentAuthenticationAzure
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentAuthenticationAzure(tokenId: string, callback?: (agentId: string) => void, callbackError?: (msgError: string) => void);
+```
+
 ## agentAuthenticationISAM
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentAuthenticationISAM(token: any, callback?: (agentId: string) => void, callbackError?: (msgError: string) => void);
+```
 
 ## agentAuthenticationWithPause
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentAuthenticationWithPause(login: string, passwd: string, reasonCode: null | boolean,);
+```
+
 ## agentAuthenticationISAMPause
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentAuthenticationISAMPause(tokenId: string, reasonCode: null | boolean, callback?: (agentId: string) => void);
+```
 
 ## agentAuthenticationAzureWithPause
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentAuthenticationAzureWithPause(tokenId: string, reasonCode: null | boolean, callback?: (agentId: string) => void);
+```
+
 ## agentReasonRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentReasonRequest(reasonId: string);
+```
 
 ## agentReasonRequestByCode
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentReasonRequestByCode(reasonCode: string);
+```
+
 ## coordinatedAgentPause
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.coordinatedAgentPause(reasonId: string, reasonCode: string);
+```
 
 ## agentIdleRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentIdleRequest();
+```
+
 ## agentLogout
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentLogoutnge();
+```
 
 ## coordinatedAgentLogout
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.coordinatedAgentLogout();
+```
+
 ## updateAgentIpAddress
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.updateAgentIpAddress(ip: string);
+```
 
 ## updateMailingData
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.updateMailingData(mailingData: string);
+```
+
 ## updateCallData
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.updateCallData(campaignData: string);
+```
 
 ## transferCallRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.transferCallRequest(callId?: string);
+```
+
 ## blindTransferCallRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.blindTransferCallRequest(phoneNumber: string, uuiData: string);
+```
 
 ## sendPreviewCallRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.sendPreviewCallRequest(phoneNumber: string);
+```
+
 ## sendManualCallRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.sendManualCallRequest(ddd: string, phoneNumber: string, campaignId: string);
+```
 
 ## retrievesCall
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.retrievesCall(callId?: number);
+```
+
 ## redialRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.redialRequest();
+```
 
 ## markRecordingRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.markRecordingRequest(callId: string, description: string);
+```
+
 ## manualCallStateRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.manualCallStateRequest();
+```
 
 ## listReasons
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listReasons(callback?: (listReasons: any) => void);
+```
+
 ## listOnlineAgents
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listOnlineAgents();
+```
 
 ## listDispositions
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listDispositions();
+```
+
 ## listCompanies
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listCompanies();
+```
 
 ## listCampaignsToConsulting
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listCampaignsToConsulting(campaignId?: string);
+```
+
 ## listCampaignsToChat
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listCampaignsToChat(campaignId?: string);
+```
 
 ## listCampaignCompany
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listCampaignCompany();
+```
+
 ## listActiveCalls
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listActiveCalls();
+```
 
 ## hangupRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.hangupRequest(callId?: any);
+```
+
 ## hangupAndDispositionCallByCode
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.hangupAndDispositionCallByCode(dispositionCode: string);
+```
 
 ## hangupAndDispositionCallBackByCode
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.hangupAndDispositionCallBackByCode(
+    dispositionCode: any,
+    year: any,
+    month: any,
+    day: any,
+    hour: any,
+    minute: any,
+    phoneNumber: any,
+    specificAgent?: any
+);
+```
+
 ## hangupAndDispositionCallBack
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.hangupAndDispositionCallBack(
+    dispositionId: any,
+    year: any,
+    month: any,
+    day: any,
+    hour: any,
+    minute: any,
+    phoneNumber: any,
+    specificAgent?: any
+);
+```
 
 ## hangupAndDispositionCall
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.hangupAndDispositionCall(dispositionId: any);
+```
+
 ## endManualCallStateRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.endManualCallStateRequest();
+```
 
 ## dispositionCallByCode
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.dispositionCallByCode(dispositionCode: any);
+```
+
 ## listAvailableOnlineAgents
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listAvailableOnlineAgents();
+```
 
 ## dispositionCallBackByCode
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.dispositionCallBackByCode(
+    dispositionCode: any,
+    year: any,
+    month: any,
+    day: any,
+    hour: any,
+    minute: any,
+    phoneNumber: any,
+    specificAgent?: any
+);
+```
+
 ## dispositionCallBack
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.dispositionCallBack(
+    dispositionId: any,
+    year: any,
+    month: any,
+    day: any,
+    hour: any,
+    minute: any,
+    phoneNumber: any,
+    specificAgent: any = false,
+    forceCallId: any,
+);
+```
 
 ## dispositionCall
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.dispositionCall(dispositionId: any, forceCallId: any);
+```
+
 ## consultingRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.consultingRequest(phoneNumber: any, campaignId: any, uuiData?: any);
+```
 
 ## consultingAgentRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.consultingAgentRequest(transferAgentId: any, transferLogin: any, uuiData: any);
+```
+
 ## closeCustomer
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.closeCustomer();
+```
 
 ## closeCustomerWithDispositionId
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.closeCustomerWithDispositionId(dispositionId: any);
+```
+
 ## closeCustomerWithDispositionCode
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.closeCustomerWithDispositionCode(dispositionCode: any);
+```
 
 ## conferenceRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.conferenceRequest();
+```
+
 ## stopConferenceRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.stopConferenceRequest();
+```
 
 ## referCallRequest
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.referCallRequest(agentId: any | null, phoneNumber: any, uui: any, address: any);
+```
+
 ## getMailingHistory
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.getMailingHistory(mailingName: any, recordId: any, maxResults: any, lastDaysLimit: any, dialogId: any);
+```
 
 ## getRecordHistory
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.getRecordHistory(
+    mailingName: any,
+    recordId: any,
+    customerId: any,
+    maxResults: any,
+    lastDaysLimit: any,
+    dialogId: any
+);
+```
+
 ## agentDailySummary
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentDailySummary(agentId?: any);
+```
 
 ## getMySupervisor
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.getMySupervisor(agentId?: any);
+```
+
 ## retrieveSupervisioningMessages
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.retrieveSupervisioningMessages(
+    agentId: any,
+    supervisorId: any,
+    range_start: any,
+    range_end: any,
+    broadcast: any,
+    received: any
+);
+```
 
 ## sendMessageToSupervisor
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.sendMessageToSupervisor(agentId: any, supervisorId: any, message: any);
+```
+
 ## pauseRecording
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.pauseRecording(callId: any, beep: boolean, timeout: any);
+```
 
 ## resumeRecording
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.resumeRecording(callId: any, beep: boolean, timeout: any);
+```
+
 ## extendWrapTimeoutRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.extendWrapTimeoutRequest(seconds: any);
+```
 
 ## listAgentsOnlineWithCampaigns
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.listAgentsOnlineWithCampaigns();
+```
+
 ## unextendedAgentLogin
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.unextendedAgentLogin(login: string, passwd: string, phoneNumber: any, callback: (agentId: any) => void);
+```
 
 ## connectAgentLoginCall
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.connectAgentLoginCall();
+```
+
 ## dropAgentLoginCall
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.dropAgentLoginCall();
+```
 
 ## setCurrentCustomer
 
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.setCurrentCustomer(
+    mailingName: string,
+    recordId: number,
+    indexId: number,
+    callData?: any,
+    callback?: () => void,
+    callbackError?: () => void,
+);
+```
+
 ## thirdPartyEventRequest
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.thirdPartyEventRequest(agentID: number, eventData: string);
+```
