@@ -1,5 +1,7 @@
 {
   "basic": "Básico de Voz",
-  "internal-transfer": "Transferência Intena",
-  "external-transfer": "Transferência Externa"
+  "internal-transfer": "Transferência Interna",
+  "external-transfer": "Transferência Externa",
+  "chat": "Chat",
+  "email": "E-mail"
 }

@@ -35,6 +35,10 @@ const config: DocsThemeConfig = {
     text: "",
   },
   gitTimestamp: "",
+  sidebar:{
+    defaultMenuCollapseLevel: -1
+  }
+  
 };
 
 //https://nextra.site/docs/docs-theme/page-configuration

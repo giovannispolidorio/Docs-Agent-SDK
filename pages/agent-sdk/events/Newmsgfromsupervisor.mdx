@@ -4,6 +4,14 @@
 
 Este evento é o evento retorna a mensagem enviado pelo supervisor para o operador.
 
+## Como escutar
+
+```js copy
+import { olosOn } from "olosagentsdk";
+
+olosOn("NewMsgFromSupervisor", callback);
+```
+
 ## Payload
 
 ```json copy

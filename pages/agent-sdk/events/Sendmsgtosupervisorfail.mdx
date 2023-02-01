@@ -4,6 +4,14 @@
 
 Este evento é disparado quando houver um erro no envio da mensagem para o supervisor com as informaçõ es sobre os erros.
 
+## Como escutar
+
+```js copy
+import { olosOn } from "olosagentsdk";
+
+olosOn("SendMsgToSupervisorFail", callback);
+```
+
 ## Payload
 
 ```json copy

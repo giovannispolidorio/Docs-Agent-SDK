@@ -4,6 +4,14 @@
 
 Evento recebido quando uma chamada é atendida.
 
+## Como escutar
+
+```js copy
+import { olosOn } from "olosagentsdk";
+
+olosOn("ActiveCall", callback);
+```
+
 ## Payload
 
 GenericInt (int): CallId (int) -> identificador da chamada. 

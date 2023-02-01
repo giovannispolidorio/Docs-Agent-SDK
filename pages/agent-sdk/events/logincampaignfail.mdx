@@ -4,6 +4,14 @@
 
 Evento de falha no login do agente em uma campanha.
 
+## Como escutar
+
+```js copy
+import { olosOn } from "olosagentsdk";
+
+olosOn("LoginCampaignFail", callback);
+```
+
 ## Payload
 
 ```json copy
