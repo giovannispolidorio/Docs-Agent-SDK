@@ -1,7 +1,5 @@
 # Newmsgfromsupervisor
 
-## Descrição
-
 Este evento é o evento retorna a mensagem enviado pelo supervisor para o operador.
 
 ## Como escutar
@@ -15,5 +13,11 @@ olosOn("NewMsgFromSupervisor", callback);
 ## Payload
 
 ```json copy
-{ "messageId": 90046, "broadcastId": 0, "agentId": 48, "supervisorId": 49, "message": "Mensagem para o Operador" }
+{
+  "messageId": 90046,
+  "broadcastId": 0,
+  "agentId": 48,
+  "supervisorId": 49,
+  "message": "Mensagem para o Operador"
+}
 ```

@@ -1,8 +1,10 @@
 # OlosMcx
 
-Text
+O OlosMcx permite controlar e gerenciar a jornada do cliente na plataforma Olos.
 
 ## getJourney
+
+Solicita a criação de um id de jornada para o cliente.
 
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
@@ -16,6 +18,8 @@ mcx.getJourney(
 ```
 
 ## disposition
+
+Solicita que uma chamada voz seja tabulada.
 
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
@@ -31,6 +35,8 @@ mcx.disposition(
 
 ## phoneInfoReq
 
+Solicita os dados de contato de um cliente.
+
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
 
@@ -44,6 +50,8 @@ mcx.phoneInfoReq(
 ```
 
 ## search
+
+Solicita informações de um registro no mailing do Olos Channel que contenham um determinado layout.
 
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
@@ -59,6 +67,8 @@ mcx.search(
 
 ## delJourneyFromSms
 
+Solicita a exlusão da memória do SMS, evitando que seu controle de timeout seja acionado.
+
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
 
@@ -72,6 +82,8 @@ mcx.delJourneyFromSms(
 ```
 
 ## recordInfo
+
+Solicita informações de um determinado registo no Olos Channel.
 
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
@@ -87,6 +99,8 @@ mcx.recordInfo(
 
 ## recordInfoEncrypt
 
+Solicita as informações de um determinado registro (utilizado para integração com OWI).
+
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
 
@@ -101,6 +115,8 @@ mcx.recordInfoEncrypt(
 
 ## setRecordInUse
 
+Solicita que um contato do mailing seja reservado para uma determinada campanha.
+
 ```ts copy
 import { OlosMcx } from "olosagentsdk";
 
@@ -114,6 +130,8 @@ mcx.setRecordInUse(
 ```
 
 ## addHistory
+
+Solicita a inserção de um histórico para um contato do mailing.
 
 ```ts copy
 import { OlosMcx } from "olosagentsdk";

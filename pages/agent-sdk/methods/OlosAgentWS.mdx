@@ -4,7 +4,7 @@ No OlosAgentWS contém todos os métodos de comunicação que permite o controle
 
 ## agentAuthentication
 
-Autenticação do Agente na plataforma Olos no Discador e no Olos Channel.
+Autenticação do Agente na plataforma Olos no Discador e Campanhas de Texto.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -15,7 +15,7 @@ agentWS.agentAuthentication(login: string, passwd: string, callback?: (agentId: 
 
 ## agentAuthenticationAzure
 
-Autenticar o Agente na plataforma Olos no Discador e no Olos Channel para integrações com o identity provider Microsoft Azure Active Directory
+Autenticar o Agente na plataforma Olos no Discador e Campanhas de Texto para integrações com o identity provider Microsoft Azure Active Directory
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -26,7 +26,7 @@ agentWS.agentAuthenticationAzure(tokenId: string, callback?: (agentId: string) =
 
 ## agentAuthenticationISAM
 
-Autenticar o Agente na plataforma Olos no Discador e no Olos Channel para integrações com o identity provider IBM ISAM.
+Autenticar o Agente na plataforma Olos no Discador e Campanhas de Texto para integrações com o identity provider IBM ISAM.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -37,7 +37,7 @@ agentWS.agentAuthenticationISAM(token: any, callback?: (agentId: string) => void
 
 ## agentAuthenticationWithPause
 
-Autenticar o Agente na plataforma Olos já no estado de pausa.
+Autenticar o Agente na plataforma Olos no Discador e Campanhas de Texto já no estado de pausa.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -92,7 +92,7 @@ agentWS.agentReasonRequestByCode(reasonCode: string);
 
 ## coordinatedAgentPause
 
-Solicitar pausa do Agente coordenada entre todas as campanhas de Voz e Olos Channel.
+Solicitar pausa do Agente coordenada entre todas as campanhas de Voz e Campanhas de Texto.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -125,7 +125,7 @@ agentWS.agentLogoutnge();
 
 ## coordinatedAgentLogout
 
-Solicitar logout do Agente coordenado entre todas as campanhas de Voz e Olos Channel
+Solicitar logout do Agente coordenado entre todas as campanhas de Voz e Campanhas de Texto
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -451,7 +451,7 @@ agentWS.listAvailableOnlineAgents();
 
 ## dispositionCallBackByCode
 
-Solcita que a chamada de voz atual seja tabulada informando um código de integrador realizando um agendamento.
+Solicita que a chamada de voz atual seja tabulada informando um código de integrador realizando um agendamento.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -682,7 +682,7 @@ agentWS.pauseRecording(callId: any, beep: boolean, timeout: any);
 
 ## resumeRecording
 
-Solcita o retorno de uma gravação em uma chamda de voz
+Solicita o retorno de uma gravação em uma chamda de voz
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -773,4 +773,37 @@ import { OlosAgentWS } from "olosagentsdk";
 
 const agentWS = new OlosAgentWS();
 agentWS.thirdPartyEventRequest(agentID: number, eventData: string);
+```
+
+## getAmountCallsInQueue
+
+Todo: Solicitar uma quantidade de chamadas em fila na campanha.
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.getAmountCallsInQueue(campaignId: string);
+```
+
+## consultingAssistedCampaignRequest
+
+Todo: Solicitar uma transferência assistida para outra Campanha.
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.consultingAssistedCampaignRequest(AgentId: string, CampaignId: string, TransferAgentId: string, uuiData: string);
+```
+
+## agentDailySummary
+
+Todo: Solicita informações sobre a produção diária dos Agentes
+
+```ts copy
+import { OlosAgentWS } from "olosagentsdk";
+
+const agentWS = new OlosAgentWS();
+agentWS.agentDailySummary(agentId: string);
 ```

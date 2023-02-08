@@ -1,17 +1,10 @@
 # OlosMailingWS
 
-Text
-
-## setActiveCall
-
-```ts copy
-import { OlosMailingWS } from "olosagentsdk";
-
-const mailingWS = new OlosMailingWS();
-mailingWS.setActiveCall(actCall: any);
-```
+O OlosMailingWS permite o controle e gerenciamento dos mailings na plataforma Olos.
 
 ## listMailings
+
+Solicita a listagem de todos os mailings de uma determinada campanha.
 
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
@@ -22,6 +15,8 @@ mailingWS.listMailings(campaignId: any, callback?: (response: any) => void);
 
 ## finalizeClient
 
+Solicita a finalização de um cliente no mailing informado o motivo da finalização.
+
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
 
@@ -30,6 +25,8 @@ mailingWS.finalizeClient(mailingName: any, dispId: any, customerId: any, callbac
 ```
 
 ## finalizeClientByDispositionCode
+
+Solicita a finalização de um cliente no mailing informado o motivo da finalização com um código de tabulação do integrador.
 
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
@@ -46,6 +43,8 @@ mailingWS.finalizeClientByDispositionCode(
 
 ## invalidatePhoneNumber
 
+Solicita a finalização de um telefone do cliente no mailing.
+
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
 
@@ -54,6 +53,8 @@ mailingWS.invalidatePhoneNumber(ddd: string, phoneNumber: any, callback?: (respo
 ```
 
 ## insertPhoneNumber
+
+Solicita a inserção de um telefone para o cliente no mailing com possibildiade ou não de agendamento.
 
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
@@ -64,6 +65,8 @@ mailingWS.insertPhoneNumber(ddd: any, phoneNumber: any, callback?: (response: an
 
 ## updateMailingData
 
+Solicita alterações ou atualizações nas informações dos campos do mailing.
+
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
 
@@ -72,6 +75,8 @@ mailingWS.updateMailingData(field: any, data: any, callback?: (response: any) =>
 ```
 
 ## upsertRecordData
+
+Solicita a inserção ou atualização de informações nos campos do mailing no formato do arquivo de importação.
 
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
@@ -86,6 +91,8 @@ mailingWS.upsertRecordData(
 
 ## customerCallback
 
+Solicita o agendamento fidelizado de um determinado cliente.
+
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
 
@@ -98,6 +105,8 @@ mailingWS.customerCallback(
 ```
 
 ## unfinalizeClient
+
+Solicita que um cliente finalizado no mailing retorne para o status de registro livre.
 
 ```ts copy
 import { OlosMailingWS } from "olosagentsdk";
