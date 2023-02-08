@@ -22,7 +22,7 @@ const config: DocsThemeConfig = {
     placeholder: "Buscar...",
   },
   footer: {
-    text: "Olos Tecnologia",
+    text: "Olos Tecnologia e Sistemas LTDA.",
   },
   toc: {
     title: "Nesta página",
@@ -35,10 +35,9 @@ const config: DocsThemeConfig = {
     text: "",
   },
   gitTimestamp: "",
-  sidebar:{
-    defaultMenuCollapseLevel: -1
-  }
-  
+  sidebar: {
+    defaultMenuCollapseLevel: -1,
+  },
 };
 
 //https://nextra.site/docs/docs-theme/page-configuration

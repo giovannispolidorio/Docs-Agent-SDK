@@ -1,17 +1,10 @@
 # OlosAgentWS
 
-Text
-
-## stop
-
-```ts copy
-import { OlosAgentWS } from "olosagentsdk";
-
-const agentWS = new OlosAgentWS();
-agentWS.stop();
-```
+No OlosAgentWS contém todos os métodos de comunicação que permite o controle e o gerenciamento do estado dos agentes e chamadas conectadas no discador.
 
 ## agentAuthentication
+
+Autenticação do Agente na plataforma Olos no Discador e no Olos Channel.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -22,6 +15,8 @@ agentWS.agentAuthentication(login: string, passwd: string, callback?: (agentId: 
 
 ## agentAuthenticationAzure
 
+Autenticar o Agente na plataforma Olos no Discador e no Olos Channel para integrações com o identity provider Microsoft Azure Active Directory
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -30,6 +25,8 @@ agentWS.agentAuthenticationAzure(tokenId: string, callback?: (agentId: string) =
 ```
 
 ## agentAuthenticationISAM
+
+Autenticar o Agente na plataforma Olos no Discador e no Olos Channel para integrações com o identity provider IBM ISAM.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -40,6 +37,8 @@ agentWS.agentAuthenticationISAM(token: any, callback?: (agentId: string) => void
 
 ## agentAuthenticationWithPause
 
+Autenticar o Agente na plataforma Olos já no estado de pausa.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -48,6 +47,8 @@ agentWS.agentAuthenticationWithPause(login: string, passwd: string, reasonCode: 
 ```
 
 ## agentAuthenticationISAMPause
+
+Autenticar o Agente na plataforma Olos para integrações com IBM ISAM já no estado de pausa.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -58,6 +59,8 @@ agentWS.agentAuthenticationISAMPause(tokenId: string, reasonCode: null | boolean
 
 ## agentAuthenticationAzureWithPause
 
+Autenticar o Agente na plataforma Olos para integrações com Azure Active Directory já no estado de pausa.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -66,6 +69,8 @@ agentWS.agentAuthenticationAzureWithPause(tokenId: string, reasonCode: null | bo
 ```
 
 ## agentReasonRequest
+
+Solicitar pausa para o Agente.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -76,6 +81,8 @@ agentWS.agentReasonRequest(reasonId: string);
 
 ## agentReasonRequestByCode
 
+Solicitar pausa para o Agente usando um código do integrador.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -85,12 +92,16 @@ agentWS.agentReasonRequestByCode(reasonCode: string);
 
 ## coordinatedAgentPause
 
+Solicitar pausa do Agente coordenada entre todas as campanhas de Voz e Olos Channel.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
 const agentWS = new OlosAgentWS();
 agentWS.coordinatedAgentPause(reasonId: string, reasonCode: string);
 ```
+
+Solicitar que o Agente saia de pausa e entre em estado livre.
 
 ## agentIdleRequest
 
@@ -103,6 +114,8 @@ agentWS.agentIdleRequest();
 
 ## agentLogout
 
+Solicitar logout do Agente.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -111,6 +124,8 @@ agentWS.agentLogoutnge();
 ```
 
 ## coordinatedAgentLogout
+
+Solicitar logout do Agente coordenado entre todas as campanhas de Voz e Olos Channel
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -121,6 +136,8 @@ agentWS.coordinatedAgentLogout();
 
 ## updateAgentIpAddress
 
+Alterar manualmente o endereço IP da estação do Agente na plataforma Olos.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -129,6 +146,8 @@ agentWS.updateAgentIpAddress(ip: string);
 ```
 
 ## updateMailingData
+
+Insere novas informações no registro de Mailing para um contato.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -139,6 +158,8 @@ agentWS.updateMailingData(mailingData: string);
 
 ## updateCallData
 
+Altera o conteúdo do CampaignData para que seja possível enviar novas informações no caso de uma Transferência.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -147,6 +168,8 @@ agentWS.updateCallData(campaignData: string);
 ```
 
 ## transferCallRequest
+
+Em uma chamada de consulta, solicita que a chamada em espera seja transferida.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -157,6 +180,8 @@ agentWS.transferCallRequest(callId?: string);
 
 ## blindTransferCallRequest
 
+Solicita uma transferência cega para um número externo.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -165,6 +190,8 @@ agentWS.blindTransferCallRequest(phoneNumber: string, uuiData: string);
 ```
 
 ## sendPreviewCallRequest
+
+No modo Preview, quando o Agente está em estado de Analyzing ou AfterAttempt, envia uma solictação de discagem.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -175,6 +202,8 @@ agentWS.sendPreviewCallRequest(phoneNumber: string);
 
 ## sendManualCallRequest
 
+Quando o agente está em estado de Ligação Manual, envia uma solicitação de discagem.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -183,6 +212,8 @@ agentWS.sendManualCallRequest(ddd: string, phoneNumber: string, campaignId: stri
 ```
 
 ## retrievesCall
+
+Solicita a recuperação de uma chamada de voz ativa do Agente que está em espera.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -193,6 +224,8 @@ agentWS.retrievesCall(callId?: number);
 
 ## redialRequest
 
+Solicita uma rediscagem para a chamada atual.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -201,6 +234,8 @@ agentWS.redialRequest();
 ```
 
 ## markRecordingRequest
+
+Regista uma marcação de tempo na gravação da chamada de voz.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -211,6 +246,8 @@ agentWS.markRecordingRequest(callId: string, description: string);
 
 ## manualCallStateRequest
 
+Solicita que o Agente entre em estado de chamada manual.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -219,6 +256,8 @@ agentWS.manualCallStateRequest();
 ```
 
 ## listReasons
+
+Solicita uma lista os motivos de pausa disponíveis para um Agente.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -229,6 +268,8 @@ agentWS.listReasons(callback?: (listReasons: any) => void);
 
 ## listOnlineAgents
 
+Solicita uma lista de Agentes atualmente conectados.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -237,6 +278,8 @@ agentWS.listOnlineAgents();
 ```
 
 ## listDispositions
+
+Solicita a lista de tabulações disponíveis para um chamada de voz.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -247,6 +290,8 @@ agentWS.listDispositions();
 
 ## listCompanies
 
+Solicita a lista de organizações existentes na plataforma.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -255,6 +300,8 @@ agentWS.listCompanies();
 ```
 
 ## listCampaignsToConsulting
+
+Solicita a lista de campanhas disponíveis e as organizações às quais elas pertencem.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -265,6 +312,8 @@ agentWS.listCampaignsToConsulting(campaignId?: string);
 
 ## listCampaignsToChat
 
+Solicita a lista de campanhas de chat disponíveis.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -273,6 +322,8 @@ agentWS.listCampaignsToChat(campaignId?: string);
 ```
 
 ## listCampaignCompany
+
+Solicita a lista de campanhas disponíveis e as organizações às quais elas pertencem
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -283,6 +334,8 @@ agentWS.listCampaignCompany();
 
 ## listActiveCalls
 
+Solicita a lista de chamadas ativas do Agente.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -291,6 +344,8 @@ agentWS.listActiveCalls();
 ```
 
 ## hangupRequest
+
+Solicita que a chamada de voz atual seja desligada.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -301,6 +356,8 @@ agentWS.hangupRequest(callId?: any);
 
 ## hangupAndDispositionCallByCode
 
+Solicita que a chamada de voz atual seja desligada informando um código do integrador para tabular.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -309,6 +366,8 @@ agentWS.hangupAndDispositionCallByCode(dispositionCode: string);
 ```
 
 ## hangupAndDispositionCallBackByCode
+
+Solicita que a chamada de voz atual seja desligada, informando um código do integrador para tabular realizando um agendamento.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -328,6 +387,8 @@ agentWS.hangupAndDispositionCallBackByCode(
 
 ## hangupAndDispositionCallBack
 
+Solicita que a chamada de voz atual seja desligada, informando um DispositionId para tabular realizando um agendamento.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -346,6 +407,8 @@ agentWS.hangupAndDispositionCallBack(
 
 ## hangupAndDispositionCall
 
+Solicita o desligamento da chamada de voz atual, informando um DispositionId para tabular.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -354,6 +417,8 @@ agentWS.hangupAndDispositionCall(dispositionId: any);
 ```
 
 ## endManualCallStateRequest
+
+Solicita que o agente saia do estado de chamada manual retornando o estado do agente para livre.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -364,6 +429,8 @@ agentWS.endManualCallStateRequest();
 
 ## dispositionCallByCode
 
+Solicita a chamada de voz atual seja tabulada informando um código do integrador.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -373,6 +440,8 @@ agentWS.dispositionCallByCode(dispositionCode: any);
 
 ## listAvailableOnlineAgents
 
+Solicite uma lista de Agentes atualmente disponíveis (para transferência pessoal).
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -381,6 +450,8 @@ agentWS.listAvailableOnlineAgents();
 ```
 
 ## dispositionCallBackByCode
+
+Solcita que a chamada de voz atual seja tabulada informando um código de integrador realizando um agendamento.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -399,6 +470,8 @@ agentWS.dispositionCallBackByCode(
 ```
 
 ## dispositionCallBack
+
+Solicita que a chamada de voz atual seja tabulada informando um DispositionId realizando um agendamento.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -419,6 +492,8 @@ agentWS.dispositionCallBack(
 
 ## dispositionCall
 
+Solicita que a chamada de voz atual seja tabulada.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -427,6 +502,8 @@ agentWS.dispositionCall(dispositionId: any, forceCallId: any);
 ```
 
 ## consultingRequest
+
+Solicita uma transferência assista para uma outra campanha.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -437,6 +514,8 @@ agentWS.consultingRequest(phoneNumber: any, campaignId: any, uuiData?: any);
 
 ## consultingAgentRequest
 
+Solicita uma transferência de chamada de voz para um Agente específico (PersonalCall)
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -445,6 +524,8 @@ agentWS.consultingAgentRequest(transferAgentId: any, transferLogin: any, uuiData
 ```
 
 ## closeCustomer
+
+Quando a campanha estiver no modo Preview solicita que o contato atual seja fechado passando para o próximo registro.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -455,6 +536,8 @@ agentWS.closeCustomer();
 
 ## closeCustomerWithDispositionId
 
+Quando a campanha estiver no modo Preview solicita que o contato atual seja fechado e tabulado informado um DispositionId passando para o próximo registo.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -463,6 +546,8 @@ agentWS.closeCustomerWithDispositionId(dispositionId: any);
 ```
 
 ## closeCustomerWithDispositionCode
+
+Quando a campanha estiver no modo Preview solicita que o contato atual seja fechado e tabulado informado um códifo do integrador passando para o próximo registo.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -473,6 +558,8 @@ agentWS.closeCustomerWithDispositionCode(dispositionCode: any);
 
 ## conferenceRequest
 
+Solicita a criação de uma conferência entre todas as chamdas ativas do Agente.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -481,6 +568,8 @@ agentWS.conferenceRequest();
 ```
 
 ## stopConferenceRequest
+
+Solicita o encerramento de uma conferência.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -491,6 +580,8 @@ agentWS.stopConferenceRequest();
 
 ## referCallRequest
 
+Solicita para que a operadora controladora da chamada de voz realize uma tranferência para um número de telefone externo eliminando o gerenciamento da plataforma Olos.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -500,6 +591,8 @@ agentWS.referCallRequest(agentId: any | null, phoneNumber: any, uui: any, addres
 
 ## getMailingHistory
 
+Solicita o histórico de um determinado registro no mailing.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -508,6 +601,8 @@ agentWS.getMailingHistory(mailingName: any, recordId: any, maxResults: any, last
 ```
 
 ## getRecordHistory
+
+Solicita o histórico de um determinado registro no mailing informando o customerId.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -525,6 +620,8 @@ agentWS.getRecordHistory(
 
 ## agentDailySummary
 
+Retorna informações sobre a produção diária dos Agentes.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -534,6 +631,8 @@ agentWS.agentDailySummary(agentId?: any);
 
 ## getMySupervisor
 
+Retorna o Supervisor do usuário configurado na plataforma.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -542,6 +641,8 @@ agentWS.getMySupervisor(agentId?: any);
 ```
 
 ## retrieveSupervisioningMessages
+
+Solicita as mensagens enviadas pelos operadores para um supervisor específico.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -559,6 +660,8 @@ agentWS.retrieveSupervisioningMessages(
 
 ## sendMessageToSupervisor
 
+Solicita o envio de mensagem para o Supervisor.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -567,6 +670,8 @@ agentWS.sendMessageToSupervisor(agentId: any, supervisorId: any, message: any);
 ```
 
 ## pauseRecording
+
+Solicita a pausa de uma gravação em um chamada de voz
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -577,6 +682,8 @@ agentWS.pauseRecording(callId: any, beep: boolean, timeout: any);
 
 ## resumeRecording
 
+Solcita o retorno de uma gravação em uma chamda de voz
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -585,6 +692,8 @@ agentWS.resumeRecording(callId: any, beep: boolean, timeout: any);
 ```
 
 ## extendWrapTimeoutRequest
+
+Solicita extender o limite de wrap (pós atendimento) para um chamada de voz atual.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -595,6 +704,8 @@ agentWS.extendWrapTimeoutRequest(seconds: any);
 
 ## listAgentsOnlineWithCampaigns
 
+Solicita a listagem de Agentes onlines e suas campanhas.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -603,6 +714,8 @@ agentWS.listAgentsOnlineWithCampaigns();
 ```
 
 ## unextendedAgentLogin
+
+Solicita o login do Agente não extendido.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -613,6 +726,8 @@ agentWS.unextendedAgentLogin(login: string, passwd: string, phoneNumber: any, ca
 
 ## connectAgentLoginCall
 
+Solicitar a conexão de uma chamada de login do Agente.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -622,6 +737,8 @@ agentWS.connectAgentLoginCall();
 
 ## dropAgentLoginCall
 
+Solicitar a desconexão da chamada de login do Agente.
+
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
 
@@ -630,6 +747,8 @@ agentWS.dropAgentLoginCall();
 ```
 
 ## setCurrentCustomer
+
+Solicita a definição de um cliente para uma chamada de voz ativa ou uma chamada de voz manual.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
@@ -646,6 +765,8 @@ agentWS.setCurrentCustomer(
 ```
 
 ## thirdPartyEventRequest
+
+Solicita o envio de eventos para integrações de terceiros.
 
 ```ts copy
 import { OlosAgentWS } from "olosagentsdk";
