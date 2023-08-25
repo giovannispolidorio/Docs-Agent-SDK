@@ -38,6 +38,10 @@ const config: DocsThemeConfig = {
   sidebar: {
     defaultMenuCollapseLevel: -1,
   },
+  i18n: [
+    { locale: "pt-BR", text: "Português BR" },
+    { locale: "es", text: "Español" },
+  ],
 };
 
 //https://nextra.site/docs/docs-theme/page-configuration
