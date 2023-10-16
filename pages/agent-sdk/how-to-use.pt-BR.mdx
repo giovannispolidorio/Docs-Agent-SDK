@@ -67,3 +67,35 @@ Nesse parâmetro informamos se o SDK de inicializar com a função de logs ligad
 # Eventos
 
 Assim que a inicialização for completa o SDK já podemos inicializar a escuta dos eventos para o agente. Vamos expecificar melhor todos os tipos de evento na próxima sessão.
+
+## Anywhere (WIP)
+
+Caso você esteja utilizando a versão da SDK que suporta o Olos Anywhere existem alguns parâmetros extras
+
+```js copy
+createOlos(addrs,token, "connectorType", "conectorValidator", callbackLogin, jsLogger)
+```
+
+### token
+
+O token deve ser um Olos token válido.
+
+### connectorType
+
+String que poder:
+
+* olos-communicator: comunicação via web socket
+
+* olos-sdk: comunicação via polling
+
+### conectorValidator
+
+String que poder:
+
+* token: autenticação via token convencional
+
+* olos-token: autenticação via Olos Token 
+
+### callbackLogin
+
+Callback que a aplicação recebe ao usuário ter efetuado login
