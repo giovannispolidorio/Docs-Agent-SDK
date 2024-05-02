@@ -1,0 +1,35 @@
+# Pooling
+
+Después de la autenticación exitosa, el proceso de polling Para verificar que hay acciones que se deben tomar para cada agente. O polling consiste en llamar periódicamente a un WebService para que los eventos estén disponibles para el agente.
+
+```js
+GET - WsAgentEvent/GetNextEventChat?agentId=1234
+```
+
+## Sobre el regreso de GetNextEventChat
+
+La llamada puede tener dos tipos de devolución
+
+### (null)
+
+Cuando la llamada regresa"(null)", Significa que no hay eventos sobresalientes para el agente en este momento.
+
+### Objeto
+
+Cuando la llamada devuelve un objeto con la estructura especificada a continuación, indica que Olos envió un evento al agente. Este objeto contiene dos parámetros importantes: eventTypeId, que identifica el tipo de evento devuelto, y eventData, que contiene datos relacionados con el evento.
+
+```js
+// Este ejemplo de respuesta significa que se produjo una LoginCampaign en la campaña 5.
+{
+  "eventTypeId": 5,
+  "timestamp": "2024-04-26T14:48:08.860838-03:00",
+  "campaignId": 8,
+  "eventData": {
+      "agentId": 1099,
+      "campaignId": 8,
+      "campaignName": "WebChat Test",
+      "campaignCode": ""
+  },
+  "channel": null
+}
+```

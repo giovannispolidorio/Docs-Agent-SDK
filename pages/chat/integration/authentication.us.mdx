@@ -1,0 +1,31 @@
+# Authentication
+
+To authenticate a user on Olos using the Agent SDK, follow the steps below:
+
+## 1 - Authentication Method Call:
+
+Use the AgentCommand/AgentAuthentication method of the Agent SDK, passing as parameters the username and password of the user you want to authenticate. Example:
+
+```js
+Olos.agentCommand.agentAuthentication(username, password);
+```
+
+## 2 - Understanding the return:
+
+Calling the authentication method will return an object that contains an integer parameter representing the agent ID. Return object example:
+
+```json
+{
+  "agentId": 12345
+}
+```
+
+### 2.1 - Successful Return
+
+If the agent ID value is greater than zero, this indicates that the user has been successfully authenticated in the Olos system.
+
+### 2.2 - Error Return
+
+If the returned agent ID value is less than or equal to zero, this indicates that user authentication in the Olos system has failed. It is recommended to take appropriate steps to deal with this scenario, such as informing the user about the authentication failure and providing additional guidance to resolve the issue, such as verifying login credentials.
+
+By following these steps, you will be able to successfully carry out the user authentication process in the Olos system using the Agent SDK.
