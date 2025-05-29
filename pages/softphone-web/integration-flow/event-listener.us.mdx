@@ -25,10 +25,10 @@ window.addEventListener("message", function (event) {
 
     switch (messageType) {
       case "disconnect":
-        console.warn("Softphone disconnected.");
+        console.warn("Session disconnected.");
         break;
       case "connect":
-        console.log("Successfully connected softphone.");
+        console.log("Session connected.");
         break;
       case "getUserMediaFail":
         console.error("Failure when accessing the microphone.");
