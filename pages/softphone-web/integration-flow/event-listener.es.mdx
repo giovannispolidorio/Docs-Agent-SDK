@@ -4,8 +4,8 @@ Después de que se incluye iframe en el documento, el siguiente paso es agregar 
 
 El oyente debe estar configurado para capturar tres mensajes de mensajes:
 
-- **disconnect** – Este mensaje se envía cuando ocurre una desconexión de un softphone, por ejemplo, si el agente se desconecta o se pierde la conexión PBX.
-- **connect** – Indica que la conexión entre el navegador y el softphone se realizó con éxito.
+- **disconnect** – Se activa cuando la sesión finaliza normalmente. Esto puede suceder cuando: Una de las partes cuelga la llamada, La sesión se termina de forma controlada.
+- **connect** – Se activa cuando la sesión se establece correctamente. Esto significa: la negociación SIP está completa y ambas partes pueden comunicarse.
 - **getUserMediaFail** – Se indica que hubo una falla al tratar de obtener acceso al micrófono, generalmente por bloqueo del navegador o ausencia de permiso otorgado por el usuario.
 
 Los mensajes siempre vienen en el siguiente formato: “softPhoneResponse|*tipo_mesage*”

@@ -4,8 +4,8 @@ Após a inclusão do iframe no documento, o próximo passo é adicionar um Event
 
 O listener deve ser configurado para capturar três tipos de mensagens:
 
-- **disconnect** – Esta mensagem é enviada quando ocorre uma desconexão do softphone, por exemplo, se o agente se desconectar ou a conexão com o PBX for perdida.
-- **connect** – Indica que a conexão entre o navegador e o softphone foi realizada com sucesso.
+- **disconnect** – Disparado quando a sessão é terminada normalmente. Isso pode acontecer quando: Uma das partes desliga a chamada, A sessão é encerrada de forma controlada.
+- **connect** – Disparado quando a sessão é estabelecida com sucesso. Isso significa que: A negociação SIP foi completada, Ambas as partes podem se comunicar.
 - **getUserMediaFail** – Sinaliza que houve uma falha ao tentar obter acesso ao microfone, normalmente por bloqueio do navegador ou ausência de permissão concedida pelo usuário.
 
 As mensagens chegam sempre no seguinte formato: "softPhoneResponse|*tipo_da_mensagem*"

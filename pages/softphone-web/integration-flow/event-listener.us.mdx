@@ -4,8 +4,8 @@ After IFRAME is included in the document, the next step is to add an event liste
 
 The listener must be configured to capture three messages of messages:
 
-- **disconnect** – This message is sent when a softphone disconnection occurs, for example, if the agent disconnects or the PBX connection is lost.
-- **connect** – It indicates that the connection between the browser and the softphone was successfully made.
+- **disconnect** – Fired when the session is terminated normally. This can happen when: One of the parties hangs up the call, The session is terminated in a controlled manner.
+- **connect** – Fired when the session is successfully established. This means: SIP negotiation is complete, Both parties can communicate.
 - **getUserMediaFail** – It signals that there was a failure when trying to gain access to the microphone, usually by lockout of the browser or absence of permission granted by the user.
 
 The messages always come in the following format: “softPhoneResponse|*message_type*”
