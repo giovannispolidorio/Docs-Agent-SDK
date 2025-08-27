@@ -4,22 +4,21 @@ Below is a list of events that are triggered to the agent, with their meaning.
 
 | eventTypeId | eventName | description |
 | ----------- | --------- | ----------- |
-| 2 | LoginResponse | Fired when login is successful |
-| 4 | LogoutResponse | Triggered when chat logout occurs or after login when the agent is not associated with any chat campaign. |
-| 5 | LoginCampaign | Triggered when the agent logs into a campaign |
-| 6 | LogoutCampaign | Triggered when the agent logs out of a campaign |
-| 7 | ScreenPop | Triggered when a chat arrives for the agent |
-| 10 | MessageReceived | Triggered when a message arrives for the agent |
-| 11 | Typing | Triggered when the other end of the chat is typing |
-| 12 | ChangeStatus | Fired whenever a status change occurs on AMD |
-| 13 | InactivityAlert | Triggered when agent downtime is reached |
-| 15 | PauseResponse | Triggered when the agent pauses |
-| 17 | QuitPauseResponse | Triggered when the agent comes out of pause |
-| 19 | DispositionResponse | Fired when a tab occurs |
-| 20 | DialogTerminated | Triggered when a chat ends |
-| 25 | ListPauseReasonsResponse | Returns agent pauses after request |
-| 50 | TransferResponse | Returns whether the chat transfer request was made successfully. |
-| 51 | messageNotice | Returns whether the sent message was delivered |
+| 2 | loginresponsetext | Fired when login is successful |
+| 4 | logoutresponsetext | Triggered when chat logout occurs or after login when the agent is not associated with any chat campaign. |
+| 5 | logincampaigntext | Triggered when the agent logs into a campaign |
+| 6 | logoutcampaigntext | Triggered when the agent logs out of a campaign |
+| 7 | screenpoptext | Triggered when a chat arrives for the agent |
+| 10 | messageresponsetext | Triggered when a message arrives for the agent |
+| 11 | typingtext | Triggered when the other end of the chat is typing |
+| 12 | changestatustext | Fired whenever a status change occurs on AMD |
+| 13 | inactivityalerttext | Triggered when agent downtime is reached |
+| 15 | pauseresponsetext | Triggered when the agent pauses |
+| 19 | dispositionresponsetext | Fired when a tab occurs |
+| 20 | dialogterminatedtext | Triggered when a chat ends |
+| 25 | listpausereasonsresponsetext | Returns agent pauses after request |
+| 50 | transferresponsetext | Returns whether the chat transfer request was made successfully. |
+| 51 | messagenoticetext | Returns whether the sent message was delivered |
 
 ## Return examples per event
 
