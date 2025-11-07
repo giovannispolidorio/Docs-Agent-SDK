@@ -17,6 +17,12 @@
     "url": "https://github.com/shuding/nextra-docs-template/issues"
   },
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "engines": {
+    "node": "20.x"
+  },
+  "overrides": {
+    "@tanstack/react-virtual": "3.9.0"
+  },
   "dependencies": {
     "next": "^13.0.6",
     "nextra": "2.0.1",
