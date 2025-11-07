@@ -36,16 +36,28 @@ const auth = {
 
 const jsLogger = false;
 
-createOlos(addrs, auth, jsLogger);
+const olosCallBack = () => {
+  console.log("Callback de inicialização");
+};
+
+createOlos(addrs, "polling", "native-token", {auth}, olosCallBack, jsLogger);
 ```
 
 ## Parametros para inicializar
 
-Para inicializarmos o SDK é necessario passar três parâmetros para a função _createOlos_
+Para inicializarmos o SDK é necessario passar alguns parâmetros para a função _createOlos_
 
 ### addrs
 
 Nesse parâmetro devemos informar para o SDK quais endereços das APIs estão disponibilizados para a integração.
+
+### connectorType
+
+Nesse parâmetro devemos informar para o SDK qual o tipo de conector que estamos utilizando. As opções são: "polling" ou "olos-communicator"(Em desenvolvimento). 
+
+### connectorValidator
+
+Nesse parâmetro devemos informar para o SDK qual o tipo de validação que estamos utilizando. As opções são: "native-token" ou "cognito-token".
 
 ### auth
 
