@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://agent-sdk-docs.vercel.app/$1",
+      "permanent": true
+    }
+  ]
+}
